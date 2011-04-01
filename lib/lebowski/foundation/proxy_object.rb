@@ -213,9 +213,11 @@ module Lebowski
         end
         
         type = type.downcase
+        rtype = Regexp.new(type)
         result = sc_all_classes.detect do |val| 
-          val.downcase == type
+          rtype =~ val.downcase
         end
+        puts result
         return (not result.nil?)
       end
       
