@@ -217,7 +217,6 @@ module Lebowski
         result = sc_all_classes.detect do |val| 
           rtype =~ val.downcase
         end
-        puts result
         return (not result.nil?)
       end
       
